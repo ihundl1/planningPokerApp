@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { SelectedCardPage } from '../selected-card/selected-card.page';
+import { CardService } from '../services/card.service';
+
 
 @Component({
   selector: 'app-home',
@@ -8,9 +10,10 @@ import { SelectedCardPage } from '../selected-card/selected-card.page';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  cards = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+  cards = this.cardService.cards;
 
-  constructor(public modalCtrl: ModalController) {}
+  constructor(public modalCtrl: ModalController,
+              private cardService: CardService) {}
 
   async onSelected(card) {
     const modal = await this.modalCtrl.create({
