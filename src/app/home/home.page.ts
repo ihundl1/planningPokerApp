@@ -10,7 +10,7 @@ import { CardService } from '../services/card.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  cards = this.cardService.cards;
+  cards = this.cardService.cardValues();
 
   constructor(public modalCtrl: ModalController,
               private cardService: CardService) {}
