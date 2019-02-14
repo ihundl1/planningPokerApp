@@ -14,7 +14,6 @@
     <ion-item *ngFor="let item of items"
               (click)="onSelect(item)"
               [ngClass]="{'selected': cardService.selection == item}">
-      <ion-icon [name]="list-box" slot="start"></ion-icon>
       {{item}}
     </ion-item>
   </ion-list>
