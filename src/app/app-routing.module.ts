@@ -15,7 +15,8 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'selected-card', loadChildren: './selected-card/selected-card.module#SelectedCardPageModule' }
+  { path: 'selected-card', loadChildren: './selected-card/selected-card.module#SelectedCardPageModule' },
+  { path: 'easter-egg', loadChildren: './easter-egg/easter-egg.module#EasterEggPageModule' }
 ];
 
 @NgModule({
