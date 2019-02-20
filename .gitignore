@@ -30,6 +30,7 @@ plugins/ios.json
 $RECYCLE.BIN/
 src/assets/egg
 src/assets/dogs
+src/assets/animals
 
 .DS_Store
 Thumbs.db

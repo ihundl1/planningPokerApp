@@ -9,11 +9,14 @@ export class CardService {
           {id:'L', img:null}, {id:'XL', img:null}, {id:'XXL', img:null}];
   fibonacci = [{id:'1', img:null}, {id:'2', img:null}, {id:'3', img:null},
               {id:'5', img:null}, {id:'8', img:null}, {id:'13', img:null}];
-  dogs = [{id:'1', img:'christmas.jpg'}, {id:'2', img:'otis.jpg'}, {id:'3', img:'ripley.jpg'},
-          {id:'4', img:'bella.jpg'}, {id:'5', img:'juno.jpg'}, {id:'6', img:'caliDog.jpg'}];
-  animals = ['rabbit', 'dog', 'deer', 'llama', 'bison', 'giraffe'];
+  dogs = [{id:'1', img:'dogs/christmas.jpg'}, {id:'2', img:'dogs/otis.jpg'},
+        {id:'3', img:'dogs/ripley.jpg'}, {id:'4', img:'dogs/bella.jpg'},
+        {id:'5', img:'dogs/juno.jpg'}, {id:'6', img:'dogs/caliDog.jpg'}];
+  animals = [{id: '1', img:'animals/a1.jpg'}, {id:'2', img:'animals/a2.jpg'},
+          {id:'3', img:'animals/a3.jpg'}, {id:'4', img:'animals/a4.jpg'},
+          {id:'5', img:'animals/a5.jpg'}, {id:'6', img:'animals/a6.jpg'}];
   selection = '';
-  options = ['sizes', 'fibonacci', 'dogs'];
+  options = ['sizes', 'fibonacci', 'dogs', 'animals'];
 
   constructor(private storage: Storage) {
 
@@ -29,8 +32,10 @@ export class CardService {
       return this.sizes;
     } else if (this.selection == 'dogs'){
       return this.dogs;
-    } else {
+    } else if (this.selection == 'fibonacci') {
       return this.fibonacci;
+    } else {
+      return this.animals;
     }
   }
 }
